@@ -1,0 +1,9 @@
+server:
+  port: 8085
+
+# expose via /actuator
+management:
+  endpoints:
+    web:
+      exposure:
+        include: "*"
