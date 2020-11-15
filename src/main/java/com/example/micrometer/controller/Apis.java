@@ -14,9 +14,14 @@ public class Apis {
         this.myService = myService;
     }
 
-    @Timed("restControllerTest")
+    /**
+     *  Gets the request and return the response(only for string types) in upper case.
+     *
+     * @return          Upper case string.
+     */
+    @Timed("restControllerTest")  // calculates the time that a request has spend in this method.
     @GetMapping(value = "/test")
-    private String test() {
+    public String test() {
         return myService.getUpperCaseString("test");
     }
 }
